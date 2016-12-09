@@ -12,6 +12,6 @@
 */
 
 $app->get('/', function () use ($app) {
-    app('cache')->put('asd', 'asdx', 5);
-    return $app->version();
+    dispatch(new App\Jobs\ExampleJob());
+    //return $app->version();
 });
